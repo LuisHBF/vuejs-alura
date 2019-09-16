@@ -29,6 +29,10 @@ export default {
 
 
     }
+  },
+
+  created(){
+    alert('componente criado');
   }
 }
 </script>
