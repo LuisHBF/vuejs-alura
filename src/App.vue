@@ -1,7 +1,11 @@
 <template>
   <div>
     <h3>{{ titulo }}</h3>
-    <img :src="foto.url" :alt="foto.titulo">
+    <ul>
+      <li li v-for="foto of fotos">
+        <img :src="foto.url" :alt="foto.titulo">
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -12,10 +16,17 @@ export default {
 
     return {
       'titulo' : 'PIC',
-      'foto' : {
+      'fotos' : [
+        {
         url : 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTwV4kVzT5McBdGSgqlVeRzubrNH_mOrrkKseDOGFURq20HmsrelEfMU7It',
         titulo: 'Cachorro'
-      }
+        },
+        {
+        url : 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTwV4kVzT5McBdGSgqlVeRzubrNH_mOrrkKseDOGFURq20HmsrelEfMU7It',
+        titulo: 'Cachorrão'
+        }
+      ]
+
 
     }
   }
